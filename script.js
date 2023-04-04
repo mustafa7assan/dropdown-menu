@@ -1,11 +1,11 @@
 const menuButton = document.querySelector(".menu-button");
-const menuItems = document.querySelector(".menu-items");
+const dropdownMenu = document.querySelector(".dropdown-menu");
 menuButton.addEventListener("click", () => {
-  menuItems.classList.toggle("hidden");
+  dropdownMenu.classList.toggle("hidden");
 });
 
 menuButton.addEventListener("mouseover", () => {
-  menuItems.classList.remove("hidden");
+  dropdownMenu.classList.remove("hidden");
 });
 let timeoutID;
 menuButton.addEventListener("mouseout", () => {
@@ -13,6 +13,6 @@ menuButton.addEventListener("mouseout", () => {
     clearTimeout(timeoutID);
   }
   timeoutID = setTimeout(() => {
-    menuItems.classList.toggle("hidden");
-  }, 1000);
+    dropdownMenu.classList.toggle("hidden");
+  }, 2000);
 });

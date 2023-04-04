@@ -36,23 +36,35 @@ nav .links {
   height: 30px;
   width: 30px;
 }
-.menu-button {
+.menu-button .arrow {
   display: flex;
   align-items: center;
 }
 .hidden {
   display: none;
 }
-.menu-items {
+.dropdown-menu {
   list-style: none;
   position: absolute;
   top: 40px;
   background-color: rgb(1, 1, 56);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.menu-items li {
+.dropdown-menu li {
   padding: 5px 20px;
 }
-.menu-items li:hover {
+.dropdown-menu li:hover {
   background-color: rgb(1, 1, 82);
+}
+
+@media screen and (max-width: 480px) {
+  .arrow {
+    display: none !important;
+  }
+  .menu {
+    display: block;
+  }
+  .dropdown-menu {
+    left: -50px;
+  }
 }
